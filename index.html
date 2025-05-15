@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 style="font-size: 69px;">Weather Analyzer</h1>
+    <form id="weather-form">
+      <input type="text" id="city" placeholder="Enter city name" required>
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather-result"></div>
+  </div>
+
+  <!-- Modal Phases -->
+  <div id="modal">
+    <div id="phase1" class="modal-phase active">
+      <div class="top">
+        <h2>Scanning</h2>
+        <a href="#" class="close-btn">×</a>
+      </div>
+      <div class="loader"></div>
+      <div class="dots-loader">
+        Loading
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div id="phase2" class="modal-phase">
+      <div class="top">
+        <h2>Analyzing</h2>
+        <a href="#" class="close-btn">×</a>
+      </div>
+      <div class="loader"></div>
+      <div class="dots-loader">
+        Performing complex calculations
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div id="phase3" class="modal-phase">
+      <div class="top">
+        <h2>Generating Result</h2>
+        <a href="#" class="close-btn">×</a>
+      </div>
+      <div class="loader"></div>
+      <div class="dots-loader">
+        Generating data
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div id="phase4" class="modal-phase">
+      <div class="top">
+        <h2>Result</h2>
+        <a href="#" class="close-btn">×</a>
+      </div>
+    
+      <div>
+        <h1>Go outside and see for your self!</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
